@@ -1,0 +1,22 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0  # Use the ref you want to point at
+    hooks:
+      - id: check-case-conflict
+      - id: check-docstring-first
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: end-of-file-fixer
+        types: [python]
+      - id: fix-byte-order-marker
+      - id: name-tests-test
+        args: ["--pytest-test-first"]
+      - id: requirements-txt-fixer
+      - id: trailing-whitespace
+        types: [python, yaml, markdown]
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.6.1
+    hooks:
+      - id: nbstripout
